@@ -10,4 +10,25 @@
       <ion-title size="large">Lista</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let habitacion of habitaciones">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>ID Habitacion: {{ habitacion.HABITACION_ID}}</ion-card-title>
+            <ion-card-subtitle>ID Hotel: {{ habitacion.HOTEL_ID }}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p><strong>Tipo:</strong> {{ habitacion.TIPO }}</p>
+            <p><strong>Capacidad:</strong> {{ habitacion.CAPACIDAD }} personas</p>
+            <p><strong>Precio:</strong> {{ habitacion.PRECIO | currency:'CLP':'symbol' }}</p>
+
+            <ion-button color="secondary" [routerLink]="['/detalle',habitacion.HABITACION_ID]">Detalles</ion-button>
+            <ion-button color="success" [routerLink]="['/reserva/:id',habitacion.HABITACION_ID]">Reservar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

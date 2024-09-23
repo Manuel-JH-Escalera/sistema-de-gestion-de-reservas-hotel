@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-lista',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista.page.scss'],
 })
 export class ListaPage implements OnInit {
-
-  constructor() { }
+  public habitaciones: any[] = [];
+  constructor(private api:APIService) { }
 
   ngOnInit() {
+    this.cargarHabitaciones();
+  }
+  cargarHabitaciones(){
+    this.api.getHabitaciones().subscribe((res)=>{
+      console.log(res);
+      this.habitaciones=res;
+    },
+    (error)=>{
+      console.log('Error al carga habitaciones:',error);
+    });
   }
 
+  
 }
