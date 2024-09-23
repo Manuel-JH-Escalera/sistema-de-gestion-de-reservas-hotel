@@ -1,7 +1,0 @@
-{
-  "name": "GestionReservasHotel",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
