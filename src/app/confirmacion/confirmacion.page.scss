@@ -1,0 +1,50 @@
+ion-header {
+    --background: #3880ff;
+}
+
+ion-toolbar {
+    --background: #3880ff;
+}
+
+ion-title {
+    text-align: center;
+    color: white;
+}
+
+ion-card {
+    margin: 20px;
+}
+
+ion-card-title {
+    font-size: 1.2em;
+    color: #333;
+}
+
+ion-card-header {
+    background-color: #f0f0f0;
+}
+
+ion-card-content {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+ion-label h2 {
+    font-weight: normal;
+    color: #666;
+}
+
+ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --border-color: transparent;
+    --background: transparent;
+}
+
+ion-list {
+    padding: 0;
+}
+
+ion-label {
+    --color: #333;
+}

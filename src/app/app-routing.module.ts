@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'confirmacion',
+    loadChildren: () => import('./confirmacion/confirmacion.module').then( m => m.ConfirmacionPageModule)
   },
+
 ];
 
 @NgModule({
