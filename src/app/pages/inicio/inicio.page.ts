@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  placeholder() {}
+
+  buscarHabitacion() {
+    console.log('habitacion buscada');
   }
-
-  placeholder(){}
-
 }

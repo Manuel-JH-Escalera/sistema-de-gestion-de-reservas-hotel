@@ -9,13 +9,80 @@
     <ion-toolbar>
       <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
-    <!--contenido aqui-->
-    <ion-list>
-      <ion-item (click)="placeholder()">
-        <ion-icon name="alert-circle" slot="start"></ion-icon>
-        <ion-label>Nombre</ion-label>
-      </ion-item>
-      <!--resto de items-->
-    </ion-list>
   </ion-header>
+
+  <ion-card>
+    <img
+      src="https://www.dahoteles.com/img/editorcms/21784/dahoteles_2023_1688126840.jpg"
+      alt="Hotel Image"
+    />
+    <ion-card-header>
+      <ion-card-title>Nombre del Hotel</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Dirección del Hotel, Ciudad, País</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Buscar Habitación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="buscarHabitacion()">
+        <ion-item>
+          <ion-label>Tipo de Habitación</ion-label>
+          <ion-select placeholder="Seleccione tipo">
+            <ion-select-option value="individual">Individual</ion-select-option>
+            <ion-select-option value="doble">Doble</ion-select-option>
+            <ion-select-option value="suite">Suite</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Capacidad</ion-label>
+          <ion-select placeholder="Seleccione capacidad">
+            <ion-select-option value="1">1 persona</ion-select-option>
+            <ion-select-option value="2">2 personas</ion-select-option>
+            <ion-select-option value="3">3 personas</ion-select-option>
+            <ion-select-option value="4+">4 o más personas</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Rango de Precio</ion-label>
+          <ion-select placeholder="Seleccione rango">
+            <ion-select-option value="economico">Económico</ion-select-option>
+            <ion-select-option value="moderado">Moderado</ion-select-option>
+            <ion-select-option value="lujo">Lujo</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button expand="block" type="submit">Buscar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item (click)="placeholder()">
+      <ion-icon name="bed-outline" slot="start"></ion-icon>
+      <ion-label>Habitaciones</ion-label>
+    </ion-item>
+    <ion-item (click)="placeholder()">
+      <ion-icon name="restaurant-outline" slot="start"></ion-icon>
+      <ion-label>Restaurante</ion-label>
+    </ion-item>
+    <ion-item (click)="placeholder()">
+      <ion-icon name="fitness-outline" slot="start"></ion-icon>
+      <ion-label>Instalaciones</ion-label>
+    </ion-item>
+    <ion-item (click)="placeholder()">
+      <ion-icon name="call-outline" slot="start"></ion-icon>
+      <ion-label>Contacto</ion-label>
+    </ion-item>
+    <ion-item (click)="placeholder()">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>Mi Cuenta</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
