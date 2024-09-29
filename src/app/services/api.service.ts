@@ -57,6 +57,10 @@ export class APIService {
       .get(this.apiURL + '/habitaciones')
       .pipe(retry(3), catchError(this.handleError));
   }
+  getHabitacion(id: string | number): Observable<any> {
+    return this.http.get(`${this.apiURL}/habitaciones/${id}`)
+    .pipe(retry(3), catchError(this.handleError))
+  }
 
   createHabitacion(data: any): Observable<any> {
     return this.http

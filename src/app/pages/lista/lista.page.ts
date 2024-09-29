@@ -21,7 +21,6 @@ export class ListaPage implements OnInit {
       },
       (error) => {
         console.log('Error al cargar habitaciones:', error);
-      }
-    );
+      });
   }
 }
