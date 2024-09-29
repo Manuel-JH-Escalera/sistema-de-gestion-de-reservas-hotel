@@ -20,7 +20,7 @@ export class ListaPage implements OnInit {
         this.habitaciones = res;
       },
       (error) => {
-        console.log('Error al carga habitaciones:', error);
+        console.log('Error al cargar habitaciones:', error);
       }
     );
   }
