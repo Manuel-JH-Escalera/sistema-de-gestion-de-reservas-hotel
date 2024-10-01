@@ -10,4 +10,26 @@
       <ion-title size="large">Detalle</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title
+        >ID Habitacion: {{ detalleHab.HABITACION_ID}}</ion-card-title
+      >
+      <ion-card-subtitle>ID Hotel: {{ detalleHab.HOTEL_ID }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Tipo:</strong> {{ detalleHab.TIPO }}</p>
+      <p><strong>Capacidad:</strong> {{ detalleHab.CAPACIDAD }} personas</p>
+      <p>
+        <strong>Precio:</strong> {{ detalleHab.PRECIO | currency:'CLP':'symbol'
+        }}
+      </p>
+      <p>TODO: Mas información</p>
+      <ion-button color="secondary" [routerLink]="['/lista']"
+        >Volver</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
 </ion-content>

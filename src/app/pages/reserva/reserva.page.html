@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Reserva</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,65 +11,51 @@
         <ion-card-title>Información de la Habitación</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-item color="light">
-          <ion-label position="stacked">Habitación:</ion-label>
-          <ion-select [(ngModel)]="datosReserva.habitacion_id" name="habitacion_id" required interface="popover">
-            <ion-select-option value="1">H401</ion-select-option>
-            <ion-select-option value="2">H402</ion-select-option>
-            <ion-select-option value="3">H403</ion-select-option>
-          </ion-select>
+        <ion-item>
+          <p position="stacked">Habitación: {{habitacionId}}</p>
         </ion-item>
 
-        <ion-item color="light">
+        <ion-item>
           <ion-label position="stacked">Fecha Entrada:</ion-label>
-          <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="datosReserva.fecha_entrada"
-            name="fecha_entrada" required [min]="today" [max]="twoYearsFromNow">
+          <ion-datetime
+            displayFormat="DD MMM YYYY"
+            pickerFormat="DD MMM YYYY"
+            [(ngModel)]="datosReserva.fecha_entrada"
+            name="fecha_entrada"
+            required
+            [min]="today"
+            [max]="twoYearsFromNow"
+          >
           </ion-datetime>
         </ion-item>
 
-        <ion-item color="light">
+        <ion-item>
           <ion-label position="stacked">Fecha Salida:</ion-label>
-          <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="datosReserva.fecha_salida"
-            name="fecha_salida" required [min]="datosReserva.fecha_entrada" [max]="twoYearsFromNow">
+          <ion-datetime
+            displayFormat="DD MMM YYYY"
+            pickerFormat="DD MMM YYYY"
+            [(ngModel)]="datosReserva.fecha_salida"
+            name="fecha_salida"
+            required
+            [min]="datosReserva.fecha_entrada"
+            [max]="twoYearsFromNow"
+          >
           </ion-datetime>
         </ion-item>
 
-        <ion-item color="light">
+        <ion-item>
           <ion-label position="stacked">Cantidad de personas:</ion-label>
-          <ion-input type="number" [(ngModel)]="datosReserva.cantidad_personas" name="cantidad_personas" required>
+          <ion-input
+            type="number"
+            [(ngModel)]="datosReserva.cantidad_personas"
+            name="cantidad_personas"
+            required
+          >
           </ion-input>
         </ion-item>
       </ion-card-content>
     </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Información del Cliente</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item color="light">
-          <ion-label position="floating">Nombre Completo:</ion-label>
-          <ion-input type="text" [(ngModel)]="datosReserva.nombre" name="nombre" required></ion-input>
-        </ion-item>
-        <ion-item color="light">
-          <ion-label position="floating">Correo Electrónico:</ion-label>
-          <ion-input type="email" [(ngModel)]="datosReserva.correo" name="correo" required></ion-input>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Información de Pago</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item color="light">
-          <ion-label position="floating">Número de Tarjeta:</ion-label>
-          <ion-input type="text" [(ngModel)]="datosReserva.tarjeta_numero" name="tarjeta_numero" required></ion-input>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-button type="submit" expand="block" color="primary">Reservar</ion-button>
+    <ion-button type="submit" expand="block">Reservar</ion-button>
   </form>
 </ion-content>
