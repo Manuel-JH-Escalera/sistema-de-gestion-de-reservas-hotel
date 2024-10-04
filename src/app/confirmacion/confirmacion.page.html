@@ -13,20 +13,26 @@
       <ion-list lines="none">
         <ion-item>
           <ion-label>
+            Habitación:
+            <h2>{{ultimaReserva?.HABITACION_ID}}</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
             Fecha de entrada:
-            <h2>MM DD AAAA</h2>
+            <h2>{{ultimaReserva?.FECHA_ENTRADA}}</h2>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
             Fecha de salida:
-            <h2>MM DD AAAA</h2>
+            <h2>{{ultimaReserva?.FECHA_SALIDA}}</h2>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            Precio total:
-            <h2>$XXXX</h2>
+            Cantidad de Personas:
+            <h2>{{ultimaReserva?.CANTIDAD_PERSONAS}}</h2>
           </ion-label>
         </ion-item>
       </ion-list>

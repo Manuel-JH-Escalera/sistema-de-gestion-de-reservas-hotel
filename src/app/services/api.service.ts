@@ -88,7 +88,7 @@ export class APIService {
 
   createUsuario(data: any): Observable<any> {
     return this.http
-      .post(this.apiURL + '/usuarios', data)
+      .post(this.apiURL + '/usuarios/', data)
       .pipe(retry(3), catchError(this.handleError));
   }
 
@@ -106,13 +106,13 @@ export class APIService {
   //reservas
   getReservas(): Observable<any> {
     return this.http
-      .get(this.apiURL + '/reservas')
+      .get(this.apiURL + '/reservas/')
       .pipe(retry(3), catchError(this.handleError));
   }
 
   createReserva(data: any): Observable<any> {
     return this.http
-      .post(this.apiURL + '/reservas', data)
+      .post(this.apiURL + '/reservas/', data)
       .pipe(retry(3), catchError(this.handleError));
   }
 
