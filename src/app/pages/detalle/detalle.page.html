@@ -13,23 +13,38 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title
-        >ID Habitacion: {{ detalleHab.HABITACION_ID}}</ion-card-title
-      >
-      <ion-card-subtitle>ID Hotel: {{ detalleHab.HOTEL_ID }}</ion-card-subtitle>
+      <ion-card-title>ID Habitacion: {{ detalleHab?.HABITACION_ID}}</ion-card-title>
+      <ion-card-subtitle>ID Hotel: {{ detalleHab?.HOTEL_ID }}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      <p><strong>Tipo:</strong> {{ detalleHab.TIPO }}</p>
-      <p><strong>Capacidad:</strong> {{ detalleHab.CAPACIDAD }} personas</p>
+      <ion-grid>
+        <!-- Row for the large picture -->
+        <ion-row>
+          <ion-col size="12">
+            <ion-img src="assets/img/placeholder.png" alt="placeholder" style="width: 100%; height: 300px;"></ion-img>
+          </ion-col>
+        </ion-row>
+      
+        <!-- Row for the two smaller pictures -->
+        <ion-row>
+          <ion-col size="6">
+            <ion-img src="assets/img/placeholder.png" alt="placeholder" style="width: 100%; height: 200px;"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img src="assets/img/placeholder.png" alt="placeholder" style="width: 100%; height: 200px;"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <p><strong>Tipo:</strong> {{ detalleHab?.TIPO }}</p>
+      <p><strong>Capacidad:</strong> {{ detalleHab?.CAPACIDAD }} personas</p>
       <p>
-        <strong>Precio:</strong> {{ detalleHab.PRECIO | currency:'CLP':'symbol'
+        <strong>Precio:</strong> {{ detalleHab?.PRECIO | currency:'CLP':'symbol'
         }}
       </p>
-      <p>TODO: Mas información</p>
-      <ion-button color="secondary" [routerLink]="['/lista']"
-        >Volver</ion-button
-      >
+      <p><strong>Ubicación</strong>: N/A</p>
+      <p><strong>Equipamiento</strong>: N/A</p>
+      <ion-button color="secondary" [routerLink]="['/lista']">Volver</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

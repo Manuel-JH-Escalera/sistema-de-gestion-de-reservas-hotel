@@ -22,7 +22,7 @@ export class DetallePage implements OnInit {
 
   ngOnInit() {
     this.habitacionId = this.route.snapshot.paramMap.get('id');
-
+    
     this.api.getHabitacion(this.habitacionId).subscribe((detalle)=>{
       console.log(detalle);
       this.detalleHab = detalle;
