@@ -15,33 +15,41 @@
           <p position="stacked">Habitación: {{habitacionId}}</p>
         </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked">Fecha Entrada:</ion-label>
-          <ion-datetime
-            displayFormat="DD MMM YYYY"
-            pickerFormat="DD MMM YYYY"
-            [(ngModel)]="datosReserva.fecha_entrada"
-            name="fecha_entrada"
-            required
-            [min]="today"
-            [max]="twoYearsFromNow"
-          >
-          </ion-datetime>
-        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" size-lg="6">
+              <ion-item>
+                <ion-label position="stacked">Fecha Entrada:</ion-label>
+                <ion-datetime
+                  displayFormat="DD MMM YYYY"
+                  pickerFormat="DD MMM YYYY"
+                  [(ngModel)]="datosReserva.fecha_entrada"
+                  name="fecha_entrada"
+                  required
+                  [min]="today"
+                  [max]="twoYearsFromNow"
+                >
+                </ion-datetime>
+              </ion-item>
+            </ion-col>
 
-        <ion-item>
-          <ion-label position="stacked">Fecha Salida:</ion-label>
-          <ion-datetime
-            displayFormat="DD MMM YYYY"
-            pickerFormat="DD MMM YYYY"
-            [(ngModel)]="datosReserva.fecha_salida"
-            name="fecha_salida"
-            required
-            [min]="datosReserva.fecha_entrada"
-            [max]="twoYearsFromNow"
-          >
-          </ion-datetime>
-        </ion-item>
+            <ion-col size="12" size-lg="6">
+              <ion-item>
+                <ion-label position="stacked">Fecha Salida:</ion-label>
+                <ion-datetime
+                  displayFormat="DD MMM YYYY"
+                  pickerFormat="DD MMM YYYY"
+                  [(ngModel)]="datosReserva.fecha_salida"
+                  name="fecha_salida"
+                  required
+                  [min]="datosReserva.fecha_entrada"
+                  [max]="twoYearsFromNow"
+                >
+                </ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
         <ion-item>
           <ion-label position="stacked">Cantidad de personas:</ion-label>
